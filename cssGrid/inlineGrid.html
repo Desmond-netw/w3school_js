@@ -24,7 +24,7 @@
     <center>
         <div class="grid-container">
             <div class="grid-item" onmouseover="this.style.backgroundColor='yellow'" onmouseout="this.style.backgroundColor='white'">
-                <input type="password" id="pwd" onkeydown="alert('Key pressed!')"> 
+                <input type="password" id="pwd"> 
             </div>
             <div class="grid-item">
                 <input type="checkbox" id="chk">Show Password
@@ -42,6 +42,6 @@
 
     chk.onchange = function(e) {
         pwd.type = chk.checked ? "text": "password";
-    }
+    };
 </script>
 </html>

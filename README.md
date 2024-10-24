@@ -129,5 +129,7 @@ Copy code
 document.querySelector('button').addEventListener('click', function() {
   alert('Button clicked using addEventListener!');
 });
-Summary:
+
+## Summary:
+
 JavaScript events like onclick, onchange, onmouseover, etc., allow interaction with web elements by reacting to user actions such as clicks, key presses, input changes, and more. These events can be used to create dynamic and interactive user experiences on a webpage.
