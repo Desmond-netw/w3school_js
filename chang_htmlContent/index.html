@@ -8,28 +8,59 @@
         .wrap {
             display: grid;
             grid-template-columns: 1fr 3fr 1fr;
-            background-color: #2196F3;
+            
             width: 500px;
             height: 250px;
             color: #fff;
         }
         .wrap .bulbs {
-            background: #fff;
+            background: #e6e6e6;
             display: flex;
             justify-content: center;
             align-items: center;
+            
         }
-
+        .wrap .onBtn,
+        .wrap .offBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: 600;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+            z-index: 2;
+            background-color: #8a8b8d;
+          
+            margin: 0;
+            padding: 0;
+            
+        }
+        button {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 20px;
+            background-color: inherit;
+            color:#fff ;
+            cursor: pointer;
+        }
+       
     </style>
 </head>
 <body>
     <center>
         <h2>This javascript can change the content of an HTML</h2>
         <div class="wrap">
-            <div class="onbutton">On Light</div>
+            <div class="onBtn" id="onBtn">
+               <button type="button"onclick="document.getElementById('bulbImg').src='bulbon.gif'">On</button>
+            </div>
             <div class="bulbs"><img id="bulbImg" src="pic_bulboff.gif" alt=""></div>
-            <div class="offbutton">off light</div>
+            <div class="offBtn" id="offBtn">
+                <button type="button" onclick="document.getElementById('bulbImg').src='pic_bulboff.gif'">Off</button>
+            </div>
         </div>
     </center>
+
+   
 </body>
 </html>
