@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline-grid</title>
+
+    <style>
+        .grid-container{
+            width: 500px;
+            display: grid;
+            grid-template-columns: 250px 220px;
+            background-color: #2196f3;
+            padding: 5px;
+            gap: 5px;
+        }
+        .grid-item{
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <h1> This is an inline Grid</h1>0
+    <center>
+        <div class="grid-container">
+            <div class="grid-item" onmouseover="this.style.backgroundColor='yellow'" onmouseout="this.style.backgroundColor='white'">
+                <input type="password" id="pwd" onkeydown="alert('Key pressed!')"> 
+            </div>
+            <div class="grid-item">
+                <input type="checkbox" id="chk">Show Password
+            </div>
+            <div class="grid-item">item3</div>
+            <div class="grid-item">item4</div>
+        </div>
+    </center>
+</body>
+
+<script>
+    //handle password show
+    const pwd = document.getElementById('pwd');
+    const chk = document.getElementById('chk');
+
+    chk.onchange = function(e) {
+        pwd.type = chk.checked ? "text": "password";
+    }
+</script>
+</html>
