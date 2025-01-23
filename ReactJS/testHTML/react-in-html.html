@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React_html</title>
+    <!-- link CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+     <!-- div container -->
+      <div id="myDiv"></div>
+      
+      <!-- react function -->
+       <script type="text/babel">
+
+            function Button() {
+                return (
+                   
+                    <button type="button">I'm a button </button>
+                );
+            }
+            const container = document.getElementById('myDiv');
+            const root = ReactDOM.createRoot (container);
+            root.render(<Button/>);
+
+       </script>
+
+
+</body>
+</html>

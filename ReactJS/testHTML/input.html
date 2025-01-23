@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Field Example</title>
+  <style>
+    /* Basic styles for the input field */
+    .input-container {
+      margin: 20px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 200px;
+    }
+
+    input:focus {
+      border-color: #005fcc;
+      outline: none;
+    }
+
+    input:disabled {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-container">
+    <label for="text-input" id="input-label">Enter Text:</label>
+    <input 
+      type="text" 
+      id="text-input" 
+      placeholder="Type something..." 
+      aria-labelledby="input-label" 
+      onchange="handleChange(event)" 
+    />
+  </div>
+
+  <div class="input-container">
+    <label for="readonly-input" id="readonly-label">Read-Only Text:</label>
+    <input 
+      type="text" 
+      id="readonly-input" 
+      value="This is read-only" 
+      readonly 
+      aria-labelledby="readonly-label" 
+    />
+  </div>
+
+  <div class="input-container">
+    <label for="disabled-input" id="disabled-label">Disabled Text:</label>
+    <input 
+      type="text" 
+      id="disabled-input" 
+      value="This is disabled" 
+      disabled 
+      aria-labelledby="disabled-label" 
+    />
+  </div>
+
+  <script>
+    // Handle input change event
+    function handleChange(event) {
+      console.log("User input:", event.target.value);
+    }
+  </script>
+</body>
+</html>
