@@ -2,9 +2,9 @@
 
 The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
 
-## **Browser Support*
+## \*_Browser Support_
 
-*The grid properties are supported in all modern browsers.*
+_The grid properties are supported in all modern browsers._
 
 ### Grid Rows
 
@@ -19,7 +19,18 @@ The vertical lines of grid items are called columns.
 The spaces between each column/row are called gaps.
 You can adjust the gap size by using one of the following properties:
 
-* column-gap
-* row-gap
+- column-gap
+- row-gap
 
-* gap
+- gap
+
+## VsCode setup: create .vscode directory > file: settings.json > copy the following snippet
+
+{
+"editor.codeActionsOnSave": {
+"source.fixAll.eslint": true,
+"source.organizeImport": true
+},
+"editor.formatOnSave": true, //tell vscode to format files on save
+"editor.defaultFormatter": "esbenp.prettier-vscode"
+}
